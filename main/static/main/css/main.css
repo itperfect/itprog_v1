@@ -55,7 +55,7 @@ main .features p { max-width: 400px; margin: 20px auto; }
 main .features div.alert-warning {
     float: left;
     clear: both;
-    width: 40px;
+    width: 400px;
     margin: 20px 34%;
     text-align: left;
 }
