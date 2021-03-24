@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ["*"]
 INSTALLED_APPS = [
     'main',
     'news',
+    'reporting',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -77,6 +78,30 @@ WSGI_APPLICATION = 'itproger.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'result',
+        'USER': 'salkov',
+        'PASSWORD': 'Artyom.salkov1',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    },
+    'mysql1': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'result',
+        'USER': 'salkov',
+        'PASSWORD': 'Artyom.salkov1',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    },
+    'mysql2': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'result',
+        'USER': 'salkov',
+        'PASSWORD': 'Artyom.salkov1',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    },
+    'default2': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
