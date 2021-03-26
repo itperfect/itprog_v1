@@ -5,8 +5,15 @@
         <h1>Страница отчётов</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad adipisci alias architecto dolor doloribus earum ex, in incidunt ipsa ipsum libero natus quia quod vel. Debitis eos maiores temporibus.</p>
         <button class="btn btn-warning">{% filter upper%}На страницу про нас{% endfilter %}</button>
-        {% for el, it in data.items %}
-            {{ el }}={{ it.NAME }}<br>
-        {% endfor %}
+        <hr >
+        {{ models }}
+        <hr >
+        {{ data }}
+        <hr >
+
+{#        {% for el, it in data.items %}#}
+{#            {{ el }}={{ it.NAME }}<br>#}
+{#        {% endfor %}#}
+
     </div>
 {% endblock %}
