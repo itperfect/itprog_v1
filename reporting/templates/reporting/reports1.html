@@ -6,40 +6,35 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad adipisci alias architecto dolor doloribus earum ex, in incidunt ipsa ipsum libero natus quia quod vel. Debitis eos maiores temporibus.</p>
         <button class="btn btn-warning">{% filter upper%}На страницу про нас{% endfilter %}</button>
         <hr >
-{#        {{ reports }}#}
+{#        {{ data }}#}
         <hr >
-        <table class="table table-striped table-dark">
+
+        {% for el in data %}
+            <table class="table table-striped table-dark">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>NAME</th>
-                    <th>DOMAIN</th>
-                    <th>SERVER</th>
-                    <th>ON SERVER ID</th>
+                    <th>Created</th>
+                    <th>Created_for</th>
+                    <th>From_server</th>
+                    <th>From_id</th>
                 </tr>
             </thead>
             <tbody>
-            {% for site in sites %}
                 <tr>
-                    <td>{{ site.id }}</td>
-                    <td>{{ site.name }}</td>
-                    <td>{{ site.domain }}</td>
-                    <td>{{ site.from_server }}</td>
-                    <td>{{ site.from_id }}</td>
+                    <td>{{ el.id }}</td>
+                    <td>{{ el.created }}</td>
+                    <td>{{ el.created_for }}</td>
+                    <td>{{ el.from_server }}</td>
+                    <td>{{ el.from_id }}</td>
                 </tr>
-            {% endfor %}
+                <tr>
+                    <td colspan="5">{{ el.data|safe }}</td>
+                </tr>
             </tbody>
-        </table>
-        <hr >
-        <hr >
-        {{ models }}
-        <hr >
-        {{ data }}
-        <hr >
-
-{#        {% for el, it in data.items %}#}
-{#            {{ el }}={{ it.NAME }}<br>#}
-{#        {% endfor %}#}
+            </table>
+        {% endfor %}
 
     </div>
+        {{ dataframes }}
 {% endblock %}

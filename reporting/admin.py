@@ -17,3 +17,4 @@ class Restrictions(admin.ModelAdmin):
 
 
 admin.site.register(Uniquelid, Restrictions)
+# -----
